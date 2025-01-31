@@ -1,6 +1,9 @@
 :root {
   --background: #ffffff;
+  --bg-grey: #f6f6f6;
+  --bg-white: #fff;
   --foreground: #171717;
+  --color: 0a0a0a;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -14,14 +17,18 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--swap);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
 }
 
 * {
@@ -35,8 +42,110 @@ a {
   text-decoration: none;
 }
 
+.container {
+  max-width: 1200px;
+  padding: 5%;
+  margin: 0 auto;
+  overflow: auto;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
+  }
+}
+
+/* Heading Tags */
+
+h1 {
+  font-size: 4rem;
+  line-height: 5rem;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+h2 {
+  font-size: 3rem;
+  line-height: 3.5rem;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+h3 {
+  font-size: 2rem;
+  line-height: 3rem;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+h4 {
+  font-size: 1.1rem;
+  line-height: 1.2rem;
+  font-weight: 600;
+  text-wrap: balance;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 500;
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0rem 0rem 1rem 0rem;
+  color: var(--color);
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover {
+  transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 1279px) {
+  h1 {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-size: 2rem;
+    line-height: 3rem;
+    font-weight: 600;
+    text-wrap: balance;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    font-weight: 600;
+    text-wrap: balance;
   }
 }

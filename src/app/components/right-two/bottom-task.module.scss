@@ -1,0 +1,54 @@
+.right_task_wrapper {
+  .row_one {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 15px 5px 15px;
+    margin: 30px 20px 10px 0px;
+    background: #000000;
+    color: #fff;
+    border-radius: 50px;
+    // width: 560px;
+    // position: absolute;
+    // bottom: 20px;
+
+    .left {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 5px;
+
+      svg {
+        margin-right: 10px;
+      }
+    }
+
+    .right {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .command {
+        svg {
+          background-color: #333333;
+          color: #fff;
+          font-size: 40px;
+          padding: 7px;
+          border-radius: 30px;
+          margin: 0px 5px;
+        }
+      }
+      .letter {
+        svg {
+          background-color: #333333;
+          color: #fff;
+          font-size: 40px;
+          padding: 7px;
+          border-radius: 30px;
+          margin: 0px 5px;
+        }
+      }
+    }
+  }
+}

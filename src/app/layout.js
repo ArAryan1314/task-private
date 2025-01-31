@@ -1,5 +1,25 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { Mulish, Montserrat, Nunito } from "next/font/google";
 import "./globals.css";
+
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"],
+  display: "swap",
+  variable: "--font-nunito", // For Tailwind CSS integration
+});
+
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"], // Optional: specify font weights you want to use
+});
+
+const mulish = Mulish({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,9 +39,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <body className={`${nunito.className}  `}>{children}</body>
     </html>
   );
 }

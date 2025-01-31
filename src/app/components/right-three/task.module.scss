@@ -1,0 +1,75 @@
+.task_layout {
+    .inner_layout {
+      background-color: #fff;
+      padding: 15px;
+      margin: 10px 0px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 10px;
+      box-shadow: 0px 0px 5px #ededed;
+
+      .left {
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        font-size: 20px;
+
+        .check {
+          input[type="checkbox"] {
+            width: 25px;
+            height: 25px;
+            border-radius: 14px;
+            vertical-align: middle;
+            margin-right: 10px;
+          }
+        }
+
+        .icon_mapped {
+          background-color: #f6f6f6;
+          padding: 5px 10px;
+          border-radius: 10px;
+          margin-left: 10px;
+
+          svg {
+            font-size: 20px;
+            vertical-align: middle;
+          }
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+
+        .time {
+          background-color: #f6f6f6;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 8px 15px;
+          border-radius: 10px;
+          color: #898989;
+          font-weight: 600;
+          svg {
+            font-size: 18px;
+            margin: 0px 6px 2px 0px;
+            vertical-align: middle;
+          }
+        }
+
+        .add {
+          background-color: #f6f6f6;
+          padding: 10px 10px 6px 10px;
+          color: #898989;
+          margin: 2px 6px 2px 10px;
+          border-radius: 10px;
+
+          svg {
+            font-size: 18px;
+            color: #898989;
+          }
+        }
+      }
+    }
+  }

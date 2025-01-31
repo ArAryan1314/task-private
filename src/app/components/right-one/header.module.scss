@@ -1,0 +1,53 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .left {
+    .heading {
+      font-size: 30px;
+      line-height: 40px;
+      font-weight: 700;
+    }
+    .desc {
+      color: #868686;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+  }
+  .right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .today_box {
+      padding: 10px;
+      background-color: #fff;
+      border-radius: 10px;
+      width: 160px;
+      margin-right: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      font-weight: 600;
+      img {
+        background: #f6f6f6;
+        padding: 10px;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        margin-right: 10px;
+      }
+    }
+
+    .more {
+      background-color: #fff;
+      border-radius: 10px;
+      img {
+        padding: 15px 10px 10px 10px;
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+}
