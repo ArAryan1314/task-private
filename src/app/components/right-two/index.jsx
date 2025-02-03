@@ -1,38 +1,45 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
+import Image from "next/image"; // Correct import
+import { FaPlus } from "react-icons/fa";
+import { FaRegFileLines } from "react-icons/fa6";
 import styles from "./bottom-task.module.scss";
-import Image from "next/image";
-import Link from "next/link";
-import { FaPlus } from "react-icons/fa6";
-import { MdKeyboardCommandKey, MdLocalParking } from "react-icons/md";
-import ClickButton from "../button";
+import Form from "../right-four";
 
-const BotttomTask = () => {
-  const [openForm, setOpenForm] = useState(false);
+const BotttomTask = ({ setTask, tasks }) => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
 
-  const onClick = (e) => {
-    setOpenForm((open) => !open);
-
-    console.log("Clicked");
+  const clickToOpen = () => {
+    setIsFormOpen((addformAryan) => !addformAryan);
   };
 
   return (
-    <div className={styles.right_task_wrapper}>
-      <div className={styles.row_one}>
-        <div className={styles.left}>
+    <div>
+      <div className={styles.add_task}>
+        <div className={styles.add_title} onClick={clickToOpen}>
           <FaPlus />
-          <ClickButton text="Create a new task data" onClick={onClick} />
+          Create new Task
         </div>
-        <div className={styles.right}>
-          <div className={styles.command}>
-            <MdKeyboardCommandKey />
+        <div className={styles.icons}>
+          <div className={styles.command_icon}>
+            <Image
+              src="/icon/cmd.png"
+              alt="command icon"
+              width={20}
+              height={20}
+            />
           </div>
-
-          <div className={styles.letter}>
-            <MdLocalParking />
-          </div>
+          <div className={styles.command_ico}>N</div>
         </div>
       </div>
+      <div className={styles.last_icon}>
+        <FaRegFileLines />
+      </div>
+      {isFormOpen && (
+        <div className={styles.form}>
+          <Form setTask={setTask} tasks={tasks} setIsFormOpen={setIsFormOpen} />
+        </div>
+      )}
     </div>
   );
 };

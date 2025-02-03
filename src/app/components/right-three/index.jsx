@@ -6,36 +6,16 @@ import { CiClock2 } from "react-icons/ci";
 import { FaRegClock } from "react-icons/fa";
 import { SiBookstack } from "react-icons/si";
 
-const TaskData = () => {
-  const [tasks, setTask] = useState([
-    {
-      id: 1,
-      text: "Jogging",
-      icon: <SiBookstack />,
-      time: "06.00 - 07.30",
-    },
-    {
-      id: 2,
-      text: "Read a book",
-      icon: <SiBookstack />,
-      time: "08.00 - 09.00",
-    },
-    {
-      id: 3,
-      text: "Wireframing new product",
-      icon: <SiBookstack />,
-      time: "09.00 - 11.00",
-    },
-    {
-      id: 4,
-      text: "MoodBoad landing page",
-      icon: <SiBookstack />,
-      time: "11.00 - 13.00",
-    },
-  ]);
+const TaskData = ({ tasks, setTask }) => {
+  const [boxOpen, setBoxOpen] = useState(null);
 
-  const addTask = (tasks) => {
-    console.log(tasks);
+  //Delete Task
+  const DeleteTask = (id) => {
+    setTask(tasks.filter((tasks) => tasks.id !== id));
+  };
+
+  const clickOpen = (id) => {
+    setBoxOpen(boxOpen === id ? null : id);
   };
 
   return (
@@ -49,15 +29,27 @@ const TaskData = () => {
               </div>
               <div className={styles.text}> {taskMap.text}</div>
               <div className={styles.icon_mapped}> {taskMap.icon}</div>
+              <div className={styles.trending}># {taskMap.extra}</div>
             </div>
 
             <div className={styles.right}>
               <div className={styles.time}>
                 <FaRegClock />
-                {taskMap.time}
+                {taskMap.start} - {taskMap.end}
               </div>
-              <div className={styles.add}>
+              <div className={styles.add} onClick={() => clickOpen(taskMap.id)}>
                 <BsThreeDotsVertical />
+                {boxOpen === taskMap.id && (
+                  <div className={styles.popup}>
+                    <div className={styles.edit}>Edit</div>
+                    <div
+                      className={styles.delete}
+                      onClick={() => DeleteTask(taskMap.id)}
+                    >
+                      Delete
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </div>

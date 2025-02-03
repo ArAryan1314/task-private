@@ -1,54 +1,49 @@
-.right_task_wrapper {
-  .row_one {
+.add_task {
+  position: fixed;
+  bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  border-radius: 50px;
+  .icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    flex-direction: row;
-    padding: 10px 15px 5px 15px;
-    margin: 30px 20px 10px 0px;
-    background: #000000;
-    color: #fff;
-    border-radius: 50px;
-    // width: 560px;
-    // position: absolute;
-    // bottom: 20px;
-
-    .left {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 5px;
-
-      svg {
-        margin-right: 10px;
-      }
-    }
-
-    .right {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-
-      .command {
-        svg {
-          background-color: #333333;
-          color: #fff;
-          font-size: 40px;
-          padding: 7px;
-          border-radius: 30px;
-          margin: 0px 5px;
-        }
-      }
-      .letter {
-        svg {
-          background-color: #333333;
-          color: #fff;
-          font-size: 40px;
-          padding: 7px;
-          border-radius: 30px;
-          margin: 0px 5px;
-        }
-      }
-    }
+    gap: 10px;
+    padding-right: 15px;
   }
+  .add_title {
+    padding-left: 10px;
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+  }
+  .command_icon {
+    background-color: #3e3e3e;
+    padding: 10px 12px 4px 12px;
+    border-radius: 30px;
+  }
+  .command_ico {
+    background-color: #3e3e3e;
+    padding: 8px 14px;
+    border-radius: 30px;
+    font-size: 18px;
+  }
+}
+.last_icon {
+  position: fixed;
+  bottom: 15px;
+  right: 105px;
+  padding: 15px;
+  background-color: white;
+  border-radius: 10px;
+}
+.form {
+  position: fixed;
+  bottom: 100px;
 }
